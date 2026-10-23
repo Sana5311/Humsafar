@@ -1,16 +1,37 @@
-# React + Vite
+# Humsafar – Daata Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+React + Vite + Tailwind CSS · framer-motion · lucide-react · deployed on Vercel
 
-Currently, two official plugins are available:
+## Run locally
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+```bash
+npm install
+npm run dev
+```
 
-## React Compiler
+## Pages
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+| Page | URL | File |
+|---|---|---|
+| Home | `/` | `src/pages/HomePage.jsx` |
+| About Humsafar | `/about` | `src/pages/AboutPage.jsx` |
+| How It Works | `/how-it-works` | `src/pages/HowItWorksPage.jsx` |
+| Safety & Trust | `/safety` | `src/pages/SafetyPage.jsx` |
+| Download & Contact | `/download` | `src/pages/DownloadPage.jsx` |
+| Delete Account | `/delete-account` | `src/pages/DeleteAccountPage.jsx` |
 
-## Expanding the ESLint configuration
+## Where to edit things
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **`src/lib/site.js`**: support email/phone, Google Play & App Store links (empty = "Coming soon"), contact form endpoint, navbar & footer links.
+- **`src/data/content.js`**: hero image, FAQs, How It Works steps, About page values, home features, **testimonials** (genuine only; section stays hidden while empty), **real app screenshots** for the phone mockup.
+- **`src/data/safety.js`**: Safety & Trust content and each feature's `available` / `planned` status.
+- **`src/index.css`**: theme colours and fonts.
+
+## Contact form
+
+With `CONTACT_FORM_ENDPOINT` empty, the form opens the visitor's email app with the message filled in.
+To receive messages directly, create a free form at Formspree or Web3Forms and paste its endpoint URL.
+
+## Deploy
+
+`vercel.json` makes direct links like `/safety` work on Vercel.
